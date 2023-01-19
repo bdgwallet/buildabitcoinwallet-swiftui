@@ -1,6 +1,6 @@
-# mybitcoinwallet - Swift
+# Build a bitcoin wallet with SwiftUI
 
-The code used in the Build a bitcoin wallet app with SwiftUI guide.
+The code used in the [Build a bitcoin wallet app with SwiftUI]() guide.
 
 ### Dependencies
 
