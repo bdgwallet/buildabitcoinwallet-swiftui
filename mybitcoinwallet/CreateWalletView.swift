@@ -7,15 +7,35 @@
 
 import SwiftUI
 import BitcoinDevKit
+import WalletUI
 
 struct CreateWalletView: View {
     @EnvironmentObject var bdkManager: BDKManager
     
     var body: some View {
-        Text("Hello, wallet!")
-        Button("Create wallet") {
-            createWallet(bdkManager: self.bdkManager)
-        }
+        VStack(spacing: 16) {
+            Spacer()
+            BitcoinImage(named: "bitcoin-circle-filled")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 150.0)
+                .foregroundColor(.bitcoinOrange)
+            Text("Bitcoin wallet")
+                .textStyle(BitcoinTitle1())
+            Text("A simple bitcoin wallet for your enjoyment")
+                .textStyle(BitcoinBody2())
+                .multilineTextAlignment(.center)
+            Spacer()
+            Button("Create wallet") {
+                createWallet(bdkManager: self.bdkManager)
+            }.buttonStyle(BitcoinFilled())
+            Button("Restore existing wallet") {
+                // code for restoring wallet called here
+            }.buttonStyle(BitcoinPlain())
+            Text("Your wallet, your coins. \n100% open-source and open-design")
+                .textStyle(BitcoinBody4())
+                .multilineTextAlignment(.center)
+        }.padding(16)
     }
 }
 

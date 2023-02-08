@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65C956492992748800AD8C5D /* WalletUI in Frameworks */ = {isa = PBXBuildFile; productRef = 65C956482992748800AD8C5D /* WalletUI */; };
 		65D6091929793F2600727ED4 /* mybitcoinwalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D6091829793F2600727ED4 /* mybitcoinwalletApp.swift */; };
 		65D6091B29793F2600727ED4 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D6091A29793F2600727ED4 /* WalletView.swift */; };
 		65D6091D29793F2700727ED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D6091C29793F2700727ED4 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65D609282979460700727ED4 /* BitcoinDevKit in Frameworks */,
+				65C956492992748800AD8C5D /* WalletUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +98,7 @@
 			name = mybitcoinwallet;
 			packageProductDependencies = (
 				65D609272979460700727ED4 /* BitcoinDevKit */,
+				65C956482992748800AD8C5D /* WalletUI */,
 			);
 			productName = mybitcoinwallet;
 			productReference = 65D6091529793F2600727ED4 /* mybitcoinwallet.app */;
@@ -127,6 +130,7 @@
 			mainGroup = 65D6090C29793F2600727ED4;
 			packageReferences = (
 				65D609262979460700727ED4 /* XCRemoteSwiftPackageReference "bdk-swift" */,
+				65C956472992748800AD8C5D /* XCRemoteSwiftPackageReference "WalletUI" */,
 			);
 			productRefGroup = 65D6091629793F2600727ED4 /* Products */;
 			projectDirPath = "";
@@ -359,6 +363,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		65C956472992748800AD8C5D /* XCRemoteSwiftPackageReference "WalletUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/reez/WalletUI";
+			requirement = {
+				kind = exactVersion;
+				version = 0.2.1;
+			};
+		};
 		65D609262979460700727ED4 /* XCRemoteSwiftPackageReference "bdk-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bitcoindevkit/bdk-swift";
@@ -370,6 +382,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		65C956482992748800AD8C5D /* WalletUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65C956472992748800AD8C5D /* XCRemoteSwiftPackageReference "WalletUI" */;
+			productName = WalletUI;
+		};
 		65D609272979460700727ED4 /* BitcoinDevKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 65D609262979460700727ED4 /* XCRemoteSwiftPackageReference "bdk-swift" */;
